@@ -1,9 +1,16 @@
 body {
     margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #121212;
 }
 
 #container {
     width: 1440px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
 }
 
 .module {
@@ -54,9 +61,10 @@ p {
     width: 128px;
     height: 48px;
     padding: 16px 40px;
-    background-color: #E4C1AE;
     border: none;
     border-radius: 32px;
+    cursor: pointer;
+    background-color: #E4C1AE;
 }
 
 span {
@@ -67,25 +75,23 @@ span {
     font-weight: 700;
     font-size: 16px;
     line-height: 16px;
-    color: #FFFFFF;
+    color: white;
 }
 
-
-/* popup */
+/* popup window*/
 
 #popup-container {
     position: fixed;
     width: 380px;
     height: 98px;
-    left: 355px;
-    top: 400px;
+    margin: auto auto auto 95px;
+    padding-top: 56px;
 }
 
 #popup-header {
     width: 380px;
     height: 50px;
-    /* left: calc(50% - 380px/2 - 175px);
-    top: calc(50% - 50px/2 - 24px); */
+    margin: 0;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -97,8 +103,6 @@ span {
 #popup-content {
     width: 380px;
     height: 24px;
-    /* left: calc(50% - 380px/2 - 175px);
-    top: calc(50% - 24px/2 + 37px); */
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -109,47 +113,50 @@ span {
 
 #overlay {
     width: 100vw;
-    /* width: 1440px; */
     height: 100vh;
-    background: #121212;
     opacity: 0.5;
     left: 0;
     top: 0;
     position: fixed;
+    background: #121212;
     z-index: 1;
 }
 
-/* popup window */
 #popup-window {
     width: 920px;
     height: 210px;
-    left: 260px;
-    top: 375px;
-    background: #FFFFFF;
-    /* max-height: 50vh;
-    max-width: 80vw; */
+    margin: 20% auto;
+    background: white;
     position: fixed;
     opacity: 1;
-    /* transition: opacity 0.5s; */
     z-index: 2;
 }
 
 #close-button {
     position: absolute;
-    /* left: 25%;
-    right: 25%;
-    top: 25%;
-    bottom: 25%; */
-    right: 40px;
-    top: 28px;
-    width: 12px;
-    height: 12px;
+    right: 45px;
+    top: 30px;
+    width: 25px;
+    height: 35px;
     font-size: 200%;
     padding: 0;
     cursor: pointer;
-    background-color: white;
     border: none;
-    /* border: 2px solid #000000; */
+    background-color: white;
+}
+
+/* to upgrade */
+#reset-button {
+    border-radius: 20px;
+    width: 120px;
+    height: 25px;
+    padding: 4px 5px;
+    border: 2px solid black;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: red;
+    cursor: pointer;
 }
 
 .active {
