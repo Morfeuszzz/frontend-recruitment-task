@@ -4,7 +4,6 @@ let buttons = document.querySelectorAll(".button");
 function getCookieValue (name) {
 	let value = `; ${document.cookie}`;
 	let parts = value.split(`; ${name}=`);
-    // console.log(value,parts);
 	if (parts.length === 2) {
         return parts.pop().split(';').shift();
     } else {}
@@ -31,7 +30,6 @@ window.onload = () => {
             }
 
             counter += 1;
-            // console.log(counter);
         
             document.querySelector("#popup-window").classList.add("active");
             document.querySelector("#popup-window").classList.remove("inactive");
@@ -40,18 +38,14 @@ window.onload = () => {
             document.getElementById("popup-content").innerHTML = "You have clicked <strong>" + `${counter}` + " times </strong> to related button.";
 
             document.cookie = "counter=" + counter;
-            // console.log(document.cookie);
         });
     });
 }
 
 // function that close popup window
 function closePopupWindow() {
-    // document.querySelector('#popup-window').remove();
     document.querySelector("#popup-window").classList.remove("active");
     document.querySelector("#popup-window").classList.add("inactive");
     document.querySelector("#overlay").classList.remove("active");
     document.querySelector("#overlay").classList.add("inactive");
-    // document.querySelector(".popup-window").classList.toggle(".active");
-    // document.querySelector(".overlay").classList.toggle(".active");
 }
